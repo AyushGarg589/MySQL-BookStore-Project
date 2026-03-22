@@ -153,7 +153,7 @@ FROM orders ;
 
 ### 1) Retrieve the total number of books sold for each genre:
 
-SELECT b.genre , COUNT(o.Quantity) AS Book_Count
+SELECT b.genre , SUM(o.Quantity) AS Book_Count
 FROM orders o 
 JOIN books b 
 USING (Book_ID)
@@ -163,7 +163,7 @@ ORDER BY Book_Count DESC;
 
 ### 2) Find the average price of books in the "Fantasy" genre:
 
-SELECT ROUND(AVG(Price),2) AS Avg_Book_Price
+SELECT ROUND(AVG(Price),2) AS Avg_Fantasy_Price
 FROM books 
 WHERE genre = 'Fiction';
 
@@ -183,7 +183,7 @@ SELECT o.Book_ID , b.Title , COUNT(o.Order_ID) AS Order_Count
 FROM orders o 
 JOIN books b 
 USING (Book_ID)
-GROUP BY o.Book_ID 
+GROUP BY o.Book_ID , b.Title
 ORDER BY Order_Count DESC ; 
 
 ### 5) Show the top 3 most expensive books of 'Fantasy' Genre :
