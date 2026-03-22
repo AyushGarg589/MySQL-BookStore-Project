@@ -26,7 +26,7 @@ Inventory Tracking: Monitoring stock levels to prevent shortages.
 Customer Analytics: Understanding purchasing patterns and high-value clients.
 
 ## ❓ Business Questions & Solutions
-
+  
 ### CREATE THE DATABASE
 CREATE DATABASE OnlineBookstore;
 
