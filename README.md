@@ -163,7 +163,7 @@ ORDER BY Book_Count DESC;
 
 ### 2) Find the average price of books in the "Fantasy" genre:
 
-SELECT ROUND(AVG(Price),2) AS Avg_Fantasy_Price
+SELECT ROUND(AVG(Price),2) AS Avg_Fiction_Price
 FROM books 
 WHERE genre = 'Fiction';
 
